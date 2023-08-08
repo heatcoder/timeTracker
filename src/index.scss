@@ -1,0 +1,217 @@
+
+$blue: hsl(246, 80%, 60%);
+
+$work: hsl(15, 100%, 70%);
+$play: hsl(195, 74%, 62%);
+$study: hsl(348, 100%, 68%);
+$exercise: hsl(145, 58%, 55%);
+$social: hsl(264, 64%, 52%);
+$self-care: hsl(43, 84%, 65%);
+
+$veryDarkBlue : hsl(226, 43%, 10%);
+$darkBlue : hsl(235, 46%, 20%);
+$desatBlue :hsl(235, 45%, 61%);
+$paleBlue: hsl(236, 100%, 87%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: $veryDarkBlue;
+    color: $paleBlue;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+#root{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+.app{
+    max-width: 1150;
+    padding: 30px 20px;
+    display: grid;
+    gap: 24px;;
+    grid-template-columns: 1fr;
+}
+
+.profile{
+    background:$darkBlue;
+    border-radius:15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.profileInfo{
+    display:flex;
+    justify-content: center;
+    background: $blue;
+    border-radius: 15px;
+    align-items: center;
+    padding: 20px;;
+    gap:20px;
+}
+
+.intervalList{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+
+    .interValItem {
+        cursor: pointer;
+    }
+    .active{
+        color:#fff;
+        
+    }
+
+}
+
+.avatar {
+    width:64px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.profileTitle{
+    p{
+        font-size:15px;
+    }
+    h2{
+        font-size:24px;
+        font-weight: 300;
+        color: #fff;
+    }
+}
+
+.intervalItem{
+
+    font-size: 16px;
+    font-weight:300;
+}
+
+.card{
+    border-radius: 15px;
+    padding-top: 30px;
+    background-repeat: no-repeat;
+background-position: calc(100% - 10px) -10px;
+   
+
+   
+}
+
+.cardContent{
+    background: $darkBlue;
+    border-radius:15px;
+    padding: 30px 25px;
+}
+.activity{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    h2{
+        font-size: 18px;
+        font-weight: 400;
+        color:white;
+    }
+}
+
+.activity-info{
+    padding-top: 15px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+        font-size:32px;
+        font-weight: 300;
+        color:white;
+    }
+    p{
+        font-size: 15px;
+    }
+}
+
+
+.work{
+background-color: $work;
+background-image: url("images/icon-work.svg");
+
+}
+.play {
+
+    background-color:$play;
+background-image: url("images/icon-play.svg");
+
+}
+
+.study{
+
+    background-color:$study;
+    background-image: url("images/icon-study.svg");
+
+    
+
+}
+
+.exercise{
+
+    background-color:$exercise;
+    background-image: url("images/icon-exercise.svg");
+  
+
+}
+
+.social{
+
+    background-color:$social;
+    background-image: url("images/icon-social.svg");
+   
+
+}
+
+.self-care{
+    background-color:$self-care;
+background-image: url("images/icon-self-care.svg");
+
+
+}
+
+@media screen and (min-width: 760px){
+
+    .app{
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .profile{
+        grid-row: 1/3
+    }
+    .profileInfo{
+        flex-direction: column;
+        align-items: start;
+        flex:1;
+    }
+    .intervalList{
+        flex-direction: column;
+        align-items: start;
+        gap:15px;
+        
+        justify-content: flex-end;
+    }
+    .avatar{
+    width:78px;
+    }
+    .profileTitle{
+        h2{
+            font-size: 40px;
+        }
+    }
+}
