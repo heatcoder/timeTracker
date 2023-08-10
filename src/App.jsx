@@ -14,7 +14,7 @@ const [time, setTime]=useState("daily")
 
   {
 data.map((item, index)=>{
-return <Card time={time} setTime={setTime} key = {index} item={item}/>
+return <Card time={time}  key = {index} item={item}/>
 })
 }
 

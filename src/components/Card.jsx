@@ -1,12 +1,12 @@
 import React from 'react'
 import slugify from 'slugify'
 
-const Card = ({item, time, setTime}) => {
+const Card = ({item, time}) => {
 
   let slug = slugify(item.title,{lower:true})
   return (
     //npm install slugify to remove capital letter and space for the dynamic classes
-    <div className= {`card ${slug}`}>
+    <div className= {`card ${slug}` }>
       <div className="cardContent">
       <div className="activity">
         <h2>{item.title}</h2>
